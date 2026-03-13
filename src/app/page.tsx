@@ -85,11 +85,13 @@ export default async function HomePage() {
       </section>
 
       <section className="rounded-3xl border border-slate-200 bg-slate-900 px-6 py-12 text-white dark:border-slate-700">
-        <SectionHeading
-          eyebrow="VIP"
-          title="Premium Collection"
-          description="Ultra-desirable combinations for collectors and executive fleets."
-        />
+        <div className="mb-8 flex flex-col gap-2 text-left">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">VIP</p>
+          <h2 className="font-serif text-3xl leading-tight text-white sm:text-4xl">Premium Collection</h2>
+          <p className="max-w-2xl text-sm text-slate-200 sm:text-base">
+            Ultra-desirable combinations for collectors and executive fleets.
+          </p>
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
           {premium.slice(0, 2).map((listing) => (
             <PlateCard key={listing.id} listing={listing} view="list" />
