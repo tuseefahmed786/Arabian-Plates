@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --bg: #f6f5f2;
   --fg: #0f172a;
@@ -29,6 +31,7 @@ body {
     radial-gradient(circle at 88% 2%, rgba(15, 23, 42, 0.1), transparent 22%),
     var(--bg);
   color: var(--fg);
+  color-scheme: light;
   font-family: var(--font-manrope), sans-serif;
 }
 
