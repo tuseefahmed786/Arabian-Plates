@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "UAE Number Plate Marketplace API",
+    "description": "Production-style backend API collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "health"]
+        }
+      }
+    },
+    {
+      "name": "Auth Register",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Demo Seller\",\n  \"email\": \"seller@example.com\",\n  \"password\": \"Password@123\",\n  \"role\": \"seller\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/auth/register",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "Listings Search",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/listings?q=Dubai%20A%207777&featured=true&page=1&limit=20",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "listings"],
+          "query": [
+            { "key": "q", "value": "Dubai A 7777" },
+            { "key": "featured", "value": "true" },
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "20" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Seller Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/users/dashboard/seller",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "users", "dashboard", "seller"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5001" },
+    { "key": "accessToken", "value": "" }
+  ]
+}

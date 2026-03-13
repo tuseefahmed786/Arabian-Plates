@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore compiled backend artifacts in monorepo-like workspace.
+    "backend/dist/**",
   ]),
 ]);
 
