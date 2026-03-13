@@ -33,6 +33,20 @@ export function Footer() {
           </ul>
         </div>
       </div>
+
+      <div className="border-t border-slate-200/70 px-4 py-5 sm:px-6">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 text-xs text-slate-500">
+          <p>Copyright {new Date().getFullYear()} Arabian Plates. All rights reserved.</p>
+          <a
+            href="https://designstodevelop.com"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 font-semibold tracking-wide text-slate-700 transition hover:border-slate-900 hover:text-slate-900"
+          >
+            Built and Designed by designstodevelop.com
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
