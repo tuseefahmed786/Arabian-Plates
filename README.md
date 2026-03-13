@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arabian Plates Frontend
 
-## Getting Started
+Premium frontend-only marketplace for buying, browsing, and listing UAE car number plates.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router)
+- React + TypeScript
+- Tailwind CSS
+- Reusable component architecture with mock API-style service layer
+
+## Implemented Pages
+
+- `/` Homepage
+	- Luxury hero + search
+	- Browse by emirate and digit count
+	- Featured carousel
+	- Trending listings
+	- Premium/VIP collection
+	- How it works
+	- Trust and verification section
+	- Testimonials
+	- FAQ
+	- Final seller CTA
+- `/explore` Explore / Search Results
+	- Top controls + advanced filters
+	- Sort options
+	- Grid/list toggle
+	- Pagination
+	- Empty and error states
+- `/plates/[id]` Plate Details
+	- Large visual plate presentation
+	- Pricing and badges
+	- Seller card
+	- Make offer modal
+	- Save/share/compare/contact actions
+	- Similar listings + recently viewed
+	- Mobile bottom action bar
+- `/sell` Sell Your Plate
+	- Multi-step form wizard UI
+	- Featured options
+	- Preview before submit
+- `/dashboard` User Dashboard
+	- Overview cards
+	- Tabs for listings/saved/offers/messages/profile
+	- Analytics cards/charts
+- `/admin` Admin Dashboard
+	- Marketplace metrics
+	- Listings table and user table
+	- Moderation queue and reported items
+	- Featured listing management controls
+
+## Data Layer
+
+Mock API-style data and async services are available under:
+
+- `src/data/mock/*`
+- `src/lib/services/*`
+- `src/lib/types.ts`
+
+These are intentionally structured to be replaced by real backend APIs later.
+
+## i18n Readiness
+
+English-first implementation with dictionary structure prepared for future Arabic localization:
+
+- `src/lib/i18n/en.ts`
+
+## Design Notes
+
+- Premium, clean visual language
+- Light and dark mode support
+- Responsive across mobile, tablet, desktop
+- AED currency formatting
+- UAE-specific emirates and listing examples
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint -- --max-warnings=0
+npm run build
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Both commands pass in the current implementation.
+# Arabian-Plates
