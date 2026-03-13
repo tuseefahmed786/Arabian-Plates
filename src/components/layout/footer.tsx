@@ -22,7 +22,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <ul className="grid grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="grid grid-cols-1 gap-3 text-sm text-slate-600 dark:text-slate-300 sm:grid-cols-2">
             {footerLinks.map((item) => (
               <li key={item.label}>
                 <Link href={item.href} className="transition hover:text-slate-900 dark:hover:text-white">
@@ -35,15 +35,31 @@ export function Footer() {
       </div>
 
       <div className="border-t border-slate-200/70 px-4 py-5 sm:px-6">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 text-xs text-slate-500">
-          <p>Copyright {new Date().getFullYear()} Arabian Plates. All rights reserved.</p>
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[11px] leading-relaxed text-slate-500 sm:text-xs">
+            Copyright {new Date().getFullYear()} Arabian Plates. All rights reserved.
+          </p>
           <a
             href="https://designstodevelop.com"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 font-semibold tracking-wide text-slate-700 transition hover:border-slate-900 hover:text-slate-900"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 bg-gradient-to-r from-slate-50 to-amber-50 px-3 py-2 text-center text-[10px] font-semibold leading-tight tracking-wide text-slate-700 shadow-sm transition hover:border-slate-900 hover:text-slate-900 sm:w-auto sm:px-4 sm:text-xs"
+            aria-label="Visit Design To Develop"
           >
-            Built and Designed by designstodevelop.com
+            <span className="whitespace-normal">DESIGNED AND DEVELOPED BY DESIGN TO DEVELOP</span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-3.5 w-3.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 17 17 7" />
+              <path d="M9 7h8v8" />
+            </svg>
           </a>
         </div>
       </div>
